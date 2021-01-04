@@ -1,4 +1,4 @@
-
+const after = require('./hook.js');
 
 module.exports = {
   before: {
@@ -13,8 +13,8 @@ module.exports = {
 
   after: {
     all: [],
-    find: [],
-    get: [],
+    find: [after()],
+    get: [after()],
     create: [],
     update: [],
     patch: [],
